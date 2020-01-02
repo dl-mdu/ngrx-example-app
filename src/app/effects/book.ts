@@ -47,10 +47,7 @@ export class BookEffects {
 
       const nextSearch$ = this.actions$.ofType(book.SEARCH).skip(1);
 
-      return this.googleBooks.searchBooks(query)
-        .takeUntil(nextSearch$)
-        .map(books => new book.SearchCompleteAction(books))
-        .catch(() => of(new book.SearchCompleteAction([])));
+      return of(null);
     });
 
     constructor(private actions$: Actions, private googleBooks: GoogleBooksService) { }
