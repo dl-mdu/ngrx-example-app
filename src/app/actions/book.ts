@@ -32,8 +32,7 @@ export class LoadAction implements Action {
   constructor(public payload: Book) { }
 }
 
-export class SelectAction implements Action {
-  readonly type = SELECT;
+export class SelectAction{
 
   constructor(public payload: string) { }
 }
