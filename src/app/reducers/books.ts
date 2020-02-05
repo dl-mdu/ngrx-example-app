@@ -80,7 +80,7 @@ export const getEntities = (state: State) => state.entities;
 
 export const getIds = (state: State) => state.ids;
 
-export const getSelectedId = (state: State) => state.selectedBookId;
+export const getSelectedId = (state: State) => '';
 
 export const getSelected = createSelector(getEntities, getSelectedId, (entities, selectedId) => {
   return entities[selectedId];
